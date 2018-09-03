@@ -39,7 +39,9 @@ public class RequestProcessor {
                                                    .limit(noOfClosest)
                                                    .collect(Collectors.toList());
 
+        System.out.printf("Count: %d\n", closestList.size());
         closestList.stream().forEach(System.out::println);
+
     }
 
     private <T> Predicate<T> distinctByCoordinate(Function<? super T, Object> keyExtractor) {
